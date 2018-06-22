@@ -29,17 +29,18 @@ disqus_shortname: dnh
 # secondary is the color of banner
 # secondary black is the color of selecting banner
 color:
-  primary: 177E89
-  primary-rgb: "24,255,156"
-  secondary: 2c3e50
-  secondary-dark: 233140
+  primary: 547fb3
+  primary-rgb: "255,164,143"
+  secondary: 3c597d
+  secondary-dark: 293c54
+  accent: b36154
   
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  #copyright: Hoang Dang
+  #location: Location
+  social: I'm also at
+  #credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -55,10 +56,12 @@ social:
     url: http://github.com/DNH4
   - title: envelope
     url: http://mailto:hoangdang.eng@gmail.com
+  - title: linkedin
+    url: https://ca.linkedin.com/in/hndang
 
 # Postal address (add as many lines as necessary)
-address:
-  - line: Toronto, Ontario Canada
+#address:
+  #- line: Toronto, Ontario Canada
 
 # Credits content
 #credits: '!@#$!@#$Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
