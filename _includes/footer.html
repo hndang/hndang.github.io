@@ -12,7 +12,9 @@
                         </p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.social }}</h3>
+                        {% if site.footer.social %}
+                            <h3>{{ site.footer.social }}</h3>
+                        {% endif %}
                         <ul class="list-inline">
                             {% for network in site.social %}
                             <li>
@@ -21,10 +23,12 @@
 		                    {% endfor %}
                         </ul>
                     </div>
+                    {% if site.footer.credits %}
                     <div class="footer-col col-md-4">
                         <h3>{{ site.footer.credits }}</h3>
                         <p>{{ site.credits }}</p>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
