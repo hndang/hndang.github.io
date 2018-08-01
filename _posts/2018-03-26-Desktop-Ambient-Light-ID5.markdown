@@ -15,4 +15,4 @@ description: Ambient light for desktop monitor
 <p><iframe src="https://www.youtube.com/embed/af8YSnSm0to?rel=0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 <p>&nbsp;</p>
 <p>Here is the final setup for my monitor</p>
-<p><img src="{{site.url}}\img\post\project\desktopambientlight\post_1\setup.jpg" alt="setup" height="450"/></p>
+<p><img class="img-responsive" src="{{site.url}}\img\post\project\desktopambientlight\post_1\setup.jpg" alt="setup" height="450"/></p>

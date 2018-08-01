@@ -26,15 +26,15 @@ I have a lot of good concepts for a game. This idea however seem great so I'll t
 <p style="text-align: left;"><strong>UI Scene 3</strong>: The game</p>
 <p style="text-align: left;">&nbsp;</p>
 <p style="text-align: left;"><strong>Game Scene 1</strong>: you&rsquo;re inside the fire truck getting detail about the mission. This is the time when the player can review the building map structure and plan the best rout. Click continue to start.</p>
-<p><img src="{{site.url}}\img\post\project\firefighter\post_1\img1.png" alt="proto type 1"></p>
+<p><img class="img-responsive" src="{{site.url}}\img\post\project\firefighter\post_1\img1.png" alt="proto type 1"></p>
 <p style="text-align: left;"><strong>Game Scene 2</strong>: Actual game. Timer will start here. Player will attempt to go inside the building and save the victims. The idea is that it will be very hard to suppress all the fire and the only goal is to rescue as many people as you can. (Should there be some mission that&rsquo;s possible to clear out the fire ?)</p>
 <p style="text-align: left;">&nbsp;</p>
 <p style="text-align: left;">Other concept: Building are always possible to extinguish fire and rescue people is only for score.</p>
 <p style="text-align: left;">Scene concept:</p>
-<p><img src="{{site.url}}\img\post\project\firefighter\post_1\img2.png" alt="proto type 2"></p>
+<p><img class="img-responsive" src="{{site.url}}\img\post\project\firefighter\post_1\img2.png" alt="proto type 2"></p>
 <p style="text-align: left;">&nbsp;</p>
 <p style="text-align: left;">Real example:</p>
-<p><img src="{{site.url}}\img\post\project\firefighter\post_1\img3.png" alt="proto type 3"></p>
+<p><img class="img-responsive" src="{{site.url}}\img\post\project\firefighter\post_1\img3.png" alt="proto type 3"></p>
 <p style="text-align: left;">&nbsp;</p>
 <p style="text-align: left;"><strong>Mechanic</strong></p>
 <p style="text-align: left;">&nbsp;</p>
