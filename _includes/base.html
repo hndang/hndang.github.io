@@ -1,6 +1,0 @@
-{% assign base = '' %}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
-{% assign base = site.url %}
-{% for i in (1..{{depth}}) %}
-    {% assign base = '../' | append: base %}
-{% endfor %}
