@@ -12,12 +12,12 @@ const {icon, text="tooltips 👩‍💻", href=null} = Astro.props
 <div class="group relative flex items-center justify-center">
     <a href={href}>
         <Icon name={icon}  class="   h-12 w-12 p-2 mx-2 my-2\
-                                    bg-gray-800 text-atomic_7 hover:bg-atomic_1 \
-                                    hover:text-white rounded-3xl hover:rounded-xl \
+        bg-gray-200 dark:bg-gray-800 text-anti_atomic_7 dark:text-atomic_7 hover:bg-anti_atomic_1 dark:hover:bg-atomic_1 \
+                                    hover:text-black dark:hover:text-white rounded-3xl hover:rounded-xl \
                                     transition-all duration-300 ease-linear cursor-pointer shadow-lg"/>
     </a>
     <span class="absolute w-auto p-2 m-2 min-w-max bottom-16 rounded-md shadow-md \
-                    text-white bg-gray-900 \
+    hover:text-black dark:hover:text-white bg-gray-100 dark:bg-gray-900 \
                     text-xs font-bold \
                     transition-all duration-100 scale-0 origin-left
                     group-hover:scale-100">

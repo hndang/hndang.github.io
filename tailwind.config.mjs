@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
+    darkMode: 'class',
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
-        darkMode: 'class',
         fontFamily: {
             quirlycues: ["Quirlycues", "sans-serif"],
             ain: ["AiN", "sans-serif"],
@@ -10,14 +11,22 @@ export default {
 
         extend: {
             colors: {
-                atomic_1: '#3d5a80 ',
-                atomic_2: '#98c1d9 ',
-                atomic_3: '#e0fbfc ',
+                atomic_1: '#3d5a80',
+                atomic_2: '#98c1d9',
+                atomic_3: '#e0fbfc',
                 atomic_4: '#ee6c4d',
                 atomic_5: '#293241',
                 atomic_6: '#219ebc',
                 atomic_7: '#8ecae6',
                 atomic_8: '#ffb703',
+                anti_atomic_1: '#ffffff',
+                anti_atomic_2: '#A39594',
+                anti_atomic_3: '#363537',
+                anti_atomic_4: '#ee6c4d',
+                anti_atomic_5: '#EDEBD7',
+                anti_atomic_6: '#A39594',
+                anti_atomic_7: '#363537',
+                anti_atomic_8: '#A5668B',
             },
             fontSize: {
                 'myname': ['3rem', {
