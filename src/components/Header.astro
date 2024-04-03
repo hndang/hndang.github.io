@@ -1,14 +1,28 @@
 ---
+import Typeanimation from "./Typeanimation.astro";
 ---
 
 
 <header
-    class="flex flex-row-reverse mx-12 my-6"
+class="flex flex-row justify-between my-5 sm:mx-12 sm:my-6"
 >
+<div class="w-1/2">
+    <a href="/">
+        <Typeanimation
+        speed="100"
+        text="Hoang Dang"
+        custom_class="font-bold  text-anti_atomic_3 dark:text-atomic_3 font-quirlycues"
+        />
+    </a>
+    </div>
 
-    <ul class="flex gap-x-8">
-        <li><a href="/" class="text-white font-bold">Home</a></li>
-        <li><a href="/about" class="text-white font-bold">About</a></li>
-        <li><a href="/blog" class="text-white font-bold">Blog</a></li>
-    </ul>
+    <div  class="flex flex-row-reverse "> 
+        <ul class="flex gap-x-8">
+            <li><a href="/" class="text-white font-bold">Home</a></li>
+            <li><a href="/profile" class="text-white font-bold">About</a></li>
+            <li><a href="/blog" class="text-white font-bold">Blog</a></li>
+        </ul>
+    </div>
+
+
 </header>
