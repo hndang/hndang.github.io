@@ -2,25 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import Hero from "../components/Hero.astro";
-import Profile from "../components/Profile.astro";
+import Profile from "../components/ProfileSection.astro";
 import Project from '../components/Project.astro';
 import Blank from "../components/Blank.astro";
 import Skills from "../components/Skills.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
+import Stats from '../components/Stats.astro';
 ---
 
 <Layout title="Hoang Dang" >
 
         <Hero />
 
-        <Blank height = 10vh />
+        <!-- <Blank height = 10vh /> -->
+        <div class="h-[7vh] 2xl:h-[40vh]"/>
         <div class="flex justify-center">
             <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce absolute bottom-[10vh] md:bottom-[5vh]  xl:bottom-[10vh]" />
         </div>
-        <Blank height = 20vh />
+        <!-- <Blank height = 20vh /> -->
+
+        <!-- <div class="h-[2vh]"/> -->
+
         <!-- <Profile/> -->
         <Project/>
+        <Blank height = 20vh />
+        <Stats/>
         <Blank height = 30vh />
         <Footer/>
         <Blank height = 20vh />

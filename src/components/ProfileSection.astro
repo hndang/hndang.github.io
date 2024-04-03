@@ -6,10 +6,10 @@
 // Fullstack
 // Android dev
 // Game dev
-import FloatingText from "../components/FloatingText.astro";
+import FloatingText from "./FloatingText.astro";
 import { Icon } from "astro-icon/components";
-import Skills from "../components/Skills.astro";
-import Project from "../components/Project.astro";
+import Skills from "./Skills.astro";
+import Project from "./Project.astro";
 ---
 
 <div id="profile">
@@ -17,8 +17,8 @@ import Project from "../components/Project.astro";
         <p class="floatTextMoveL pl-10 my-[20vh]">Software engineer</p>
     </FloatingText>
 
-    <FloatingText option="justify-end">
-        <p class="floatTextMoveR pl-[10vw] my-[20vh]">9 years experiences</p>
+    <FloatingText  option="justify-end">
+        <p id="experienceText" class="floatTextMoveR pl-[10vw] my-[20vh]">9 years experience</p>
     </FloatingText>
 
     <FloatingText option="justify-end">
@@ -90,10 +90,10 @@ import Project from "../components/Project.astro";
     </FloatingText>
     <Skills />
 
-    <FloatingText>
+    <!-- <FloatingText>
         <p class="floatTextMoveL mt-[20vh] mb-[5vh]">Current Projects</p>
-    </FloatingText>
-    <Project />
+    </FloatingText> -->
+    <!-- <Project /> -->
 
     <!-- <FloatingText>
         <p class="floatText mt-[20vh] mb-[5vh]">It's the end ?! 😨</p>
@@ -105,19 +105,7 @@ import Project from "../components/Project.astro";
         </p>
     </FloatingText> -->
 
-    <div class="fles justify-center">
-        <div
-            id="funfact"
-            class=" inline cursor-pointer max-w-fit min-h-fit leading-8 bg-anti_atomic_1 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-atomic_1 text-anti_atomic_7 dark:text-atomic_7 font-bold py-2 px-4 h-11 border-b-4 border-anti_atomic_5 dark:border-atomic_5 hover:border-anti_atomic_5 dark:hover:border-atomic_5 rounded-xl"
-        >
-            Funfact!
-            <span id="funfact-text" class="hidden text-anti_atomic_2 dark:text-atomic_2">
-                I have always avoid web development but it's been fun designing and
-                coding this site
-            </span>
-        </div>
 
-    </div>
 
 </div>
 
@@ -139,18 +127,11 @@ import Project from "../components/Project.astro";
         observer.observe(card);
     });
 
-    import { typing } from "../scripts/typewrite.ts";
 
-    const tFunfact = document.querySelector("#funfact-text") as HTMLElement;
-    const bFunfact = document.querySelector("#funfact") as HTMLElement;
-    let isClick = false;
-    bFunfact.onclick = () => {
-        if (!isClick) {
-            tFunfact.style.display = "inline";
-            typing(tFunfact, 50);
-            isClick = !isClick;
-        }
-    };
+    const tExperience = document.querySelector("#experienceText") as HTMLElement;
+    let year = new Date().getFullYear() 
+    tExperience.textContent = `${year - 2014} years experience`
+
 </script>
 
 <style>
