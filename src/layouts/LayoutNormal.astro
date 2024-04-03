@@ -1,0 +1,16 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+---
+
+<Layout title=`${title}`>
+    <Header slot="header"/>
+    <slot/>
+    <Footer/>
+    <div class="h-[20vh]" />
+</Layout>
