@@ -31,7 +31,7 @@ import Animation from "../components/Animation.astro";
 
                 <div class="flex mt-4 md:mt-6">
                     <a
-                        href="https://calendly.com/hoangdang-eng/30min"
+                        href="https://calendly.com/hoangdang-eng/talk"
                         class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-anti_atomic_8 rounded-lg hover:bg-anti_atomic_2 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-atomic_1 dark:hover:bg-atomic_6 dark:focus:ring-blue-800"
                         >Let's talk!</a
                     >
@@ -168,21 +168,39 @@ import Animation from "../components/Animation.astro";
     const icon_dl = document.querySelector("#icon_dark_light") as HTMLElement;
     const icon_dl2 = document.querySelector("#icon_dark_light2") as HTMLElement;
     const parent = document.querySelector("#parent") as HTMLElement;
-    let isDark = true;
-    console.log(icon_dl);
-    console.log(icon_dl2);
+
+    // console.log(icon_dl);
+    // console.log(icon_dl2);
+    let isDark = true
+    let data = sessionStorage.getItem("isDark")
+    if (data == null){
+        isDark = false
+    }else{
+        isDark = data == "true"
+    }
+    console.log(document.documentElement.classList)
+
+    if (!isDark){
+        icon_dl.style.display = "none";
+        icon_dl2.style.display = "inline";
+    }
 
     dark_light_switch.onclick = () => {
         if (isDark) {
             icon_dl.style.display = "none";
             icon_dl2.style.display = "inline";
             isDark = false;
-            document.documentElement.classList.remove("dark");
+            document.documentElement.classList.remove("dark")
+            sessionStorage.setItem("isDark", `${isDark}`);
         } else {
             icon_dl2.style.display = "none";
             icon_dl.style.display = "inline";
             isDark = true;
             document.documentElement.classList.add("dark");
+            sessionStorage.setItem("isDark", `${isDark}`);
         }
+        console.log(document.documentElement.classList)
     };
+    
+    
 </script>

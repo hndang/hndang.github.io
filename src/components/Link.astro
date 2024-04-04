@@ -1,0 +1,49 @@
+---
+// library imports
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  text: string;
+  href: string;
+  style: "primary" | "secondary";
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
+}
+
+const {
+  text,
+  href,
+  style,
+  icon,
+  isFilled = true,
+  borderVisible = false,
+  classes,
+  ...rest
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  class = "inline-flex items-center w-fit px-4 py-2 text-sm font-medium text-center text-white bg-anti_atomic_8 rounded-lg hover:bg-anti_atomic_2 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-atomic_1 dark:hover:bg-atomic_6 dark:focus:ring-blue-800"
+
+  {...rest}
+>
+  {
+    icon && icon.side === "left" && (
+      <Icon name={icon.name} />
+    )
+  }
+
+  <span class="mx-1">{text}</span>
+
+  {
+    icon && icon.side === "right" && (
+      <Icon name={icon.name}/>
+    )
+  }
+</a>

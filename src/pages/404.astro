@@ -1,0 +1,29 @@
+---
+import LayoutNormal from "../layouts/LayoutNormal.astro"
+
+import Link from "../components/Link.astro"
+---
+
+<LayoutNormal title="Page Not Found">
+    <div class="flex flex-col">
+        <h1>
+            Welp, this is awkward!
+        </h1>
+        <p>You seem to found the dark part of my site</p>
+        <Link
+        href="/"
+        style="secondary"
+        text="Home"
+        borderVisible = {true}
+        icon={
+            {
+                name: "ic:outline-home",
+                side: "right",
+            }
+        }
+        />
+    </div>
+    
+
+
+</LayoutNormal>
