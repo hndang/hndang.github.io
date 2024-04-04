@@ -174,7 +174,7 @@ import Animation from "../components/Animation.astro";
     let isDark = true
     let data = sessionStorage.getItem("isDark")
     if (data == null){
-        isDark = false
+        isDark = true
     }else{
         isDark = data == "true"
     }
