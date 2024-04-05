@@ -6,4 +6,5 @@ alt: 'AI Chat bot language learning gif'
 date: 02/02/2024 
 category: [Webapp,LLM,AI,ads]
 frontpage: true
+skill: [Python,Javascript,CSS,FastAPI,LLM,GCP]
 ---

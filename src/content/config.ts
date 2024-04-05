@@ -9,6 +9,7 @@ const projectsCollection = defineCollection({
         alt: z.string(),
         category: z.array(z.string()),
         frontpage: z.boolean(z.string()),
+        skill: z.array(z.string()),
     })
 });
 

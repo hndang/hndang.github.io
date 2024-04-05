@@ -1,0 +1,54 @@
+---
+interface Props {
+  text: string;
+  style: "one" | "two" |"three";
+  visible?: boolean;
+}
+
+const {
+  text,
+  style,
+  visible = true,
+} = Astro.props as Props;
+
+let options = `skill font-bold`
+if(style == "one"){
+    options += " bg-anti_atomic_5 dark:bg-atomic_5 text-anti_atomic_7 dark:text-atomic_7 shadow-lg"
+}else if(style == "two"){
+    options += " bg-anti_atomic_5 dark:bg-atomic_6 text-anti_atomic_7 dark:text-atomic_3 shadow-lg"
+}else if(style == "three"){
+    options += " bg-anti_atomic_5 dark:bg-atomic_5 text-anti_atomic_7 dark:text-atomic_2"
+}
+if(visible) {
+    options += " show"
+}
+
+---
+
+<span class={options}>
+    {text}
+</span>
+
+
+
+
+<style>
+
+    .skill.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .skill {
+        text-align: center;
+        cursor: pointer;
+        opacity: 0;
+        min-width: 4rem;
+        min-height: 1rem;
+        border-radius: 0.7rem;
+        transform: translateY(-100px);
+        padding: 0.5rem;
+        transition: 1s;
+        
+    }
+</style>

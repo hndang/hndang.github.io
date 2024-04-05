@@ -6,4 +6,5 @@ alt: 'Trading bot app gif'
 date: 29/03/2024
 category: [Webapp, Python]
 frontpage: true
+skill: [Python,Tkinter]
 ---
