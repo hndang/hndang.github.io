@@ -29,11 +29,12 @@ import SidebarIcon from "../components/SidebarIcon.astro";
                 </button>
                 <SidebarIcon
                     icon="ic:baseline-forum"
-                    text="Blog 📖 - Underconstruction 👷"
+                    text="Blog 📖"
+                    href='/blog/'
                 />
-                <SidebarIcon href='#contact' icon="ic:baseline-person" text="Contact 💻" />
+                <SidebarIcon href='/profile/' icon="ic:baseline-person" text="Profile 🙂" />
                 <button id="mailButton">
-                <SidebarIcon  icon="ic:baseline-email" text="Mail ✉️" /></button>
+                <SidebarIcon  icon="ic:baseline-email" text="Mail 📪" /></button>
             </div>
         </div>
     </div>
@@ -45,8 +46,7 @@ import SidebarIcon from "../components/SidebarIcon.astro";
     const mailCopied = document.querySelector("#mailCopied") as HTMLElement
     let isClick = false
     // var showFollow = false;
-
-    mailButton.onclick = () => {
+    function copied(isClick:boolean){
         navigator.clipboard.writeText("hoangdang.eng@gmail.com")
         if(!isClick){
             isClick=true
@@ -65,7 +65,9 @@ import SidebarIcon from "../components/SidebarIcon.astro";
             2000
             )
         }
-
+    }
+    mailButton.onclick = () => {
+        copied(isClick)
     }
 
     // dark_light_switch.onclick= () => {

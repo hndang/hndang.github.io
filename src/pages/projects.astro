@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+
+const showcaseProjects = await getCollection('projects', ({ id }) => {
+  return id.startsWith('showcase/');
+});
+---
+
+<ul>
+    {
+        showcaseProjects.map(proj =>
+            <li>{proj.data.title}</li>
+        )
+    }
+</ul>

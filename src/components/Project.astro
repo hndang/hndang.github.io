@@ -3,19 +3,69 @@
 import Typeanimation from "./Typeanimation.astro";
 import { Image } from "astro:assets";
 import chatbotImg from "../media/chat-bot.gif"
+
+const media = await Astro.glob('../media/*.*');
+
+import FloatingText from "../components/FloatingText.astro";
+
+import { getCollection } from "astro:content";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import SkillButton from "./SkillButton.astro";
+
+
+
+// const showcaseProjects = await getCollection('projects', ({ id }) => {
+//   return id.startsWith('showcase/');
+// });
+
+
+const showcaseProjects = await getCollection('projects', ({ data }) => {
+  return data.frontpage == true;
+});
 ---
 
 
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-3 items-center">
+    <FloatingText>
+        <h1 class="floatTextMoveL mt-[20vh] mb-[5vh]">Recent Projects</h1>
+    </FloatingText>
+</div>
 
-<div class=" grid grid-col-1 m-2 sm:grid-cols-2" >
-    <div class="text-anti_atomic_8 dark:text-atomic_8 m-2"> <h2 class="text-4xl p-3">Ai chat bot for language learning</h2>
+<!-- <div class=" grid grid-col-1 m-2 sm:grid-cols-2 bg-anti_atomic_1 dark:bg-gray-900 sm:m-5 p-6 sm:p-10 font-bold rounded-3xl min-h-fit" >
+    <div class="text-anti_atomic_8 dark:text-atomic_8"> <h2 class="text-4xl mb-2">Ai chat bot for language learning</h2>
         <p class="text-anti_atomic_2 dark:text-atomic_2 text-lg"> I developed this project with FastAPI backend and vanilla js frontend. The LLM model is with chatGPT and the voice models are a mixed of several model</p>
         <p class="text-anti_atomic_2 dark:text-atomic_2 text-lg"> Check out the <a class="font-bold text-atomic_8 dark:text-anti_atomic_8" href="https://chatdemo.hoangdang.dev/"> DEMO</a> ! 🤖</p>
     </div>
-    <div>
+    <div class="flex flex-row-reverse my-5">
         <Image src={chatbotImg} alt="Project: AI Chat bot language learning" />
-
     </div>
-       
-</div>
+</div> -->
+
+    {
+
+        showcaseProjects.map(proj =>
+            <div class=" grid grid-col-1 m-2 sm:grid-cols-2 bg-anti_atomic_1 dark:bg-gray-900 sm:m-5 p-6 sm:p-10 font-bold rounded-3xl min-h-fit" >
+
+
+            <div class="text-anti_atomic_8 dark:text-atomic_8 "> <h2 class="text-4xl mb-2">{proj.data.title}</h2>
+                <p class="text-anti_atomic_2 dark:text-atomic_2 text-lg mr-4"> {proj.data.description}</p>  
+                <div class="flex flex-row gap-2 flex-wrap my-3 text-sm">
+                    {
+                        proj.data.skill.map( s =>
+                            <SkillButton style="three" text={s}/>
+                        )
+                    }   
+                                  
+                </div>
+                
+
+            </div>
+            <div class="flex flex-row my-5">
+                <Image class="h-fit" src={proj.data.media} alt={proj.data.alt} />
+            </div>
+
+            
+        </div>
+        )
+
+    }

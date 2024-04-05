@@ -2,28 +2,46 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import Hero from "../components/Hero.astro";
-import Profile from "../components/Profile.astro";
+import Profile from "../components/ProfileSection.astro";
+import Project from '../components/Project.astro';
 import Blank from "../components/Blank.astro";
 import Skills from "../components/Skills.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from "astro-icon/components";
+import Stats from '../components/Stats.astro';
+import Sidebar from "../components/Sidebar.astro";
+import LayoutMain from '../layouts/LayoutMain.astro';
 ---
 
-<Layout title="Hoang Dang" >
+<LayoutMain title="Hoang Dang" >
 
-        <Hero />
-
-        <Blank height = 10vh />
-        <div class="flex justify-center">
-            <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce absolute bottom-[10vh] md:bottom-[5vh]  xl:bottom-[10vh]" />
+        <div class="flex flex-col h-screen">
+            <Hero />
+            <div class="flex justify-center flex-grow items-center">
+                <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce bottom-[1vh] md:bottom-[5vh]  xl:bottom-[10vh]" />
+            </div>
         </div>
-        <Blank height = 20vh />
-        <Profile/>
-        <Blank height = 30vh />
-        <Footer/>
-        <Blank height = 20vh />
+
+
+        <!-- <Blank height = 10vh /> -->
         
-</Layout>
+
+        <!-- <div class="h-[7vh] 2xl:h-[40vh]"/> -->
+        <!-- <Blank height = 20vh /> -->
+
+        <!-- <div class="h-[2vh]"/> -->
+
+        <!-- <Profile/> -->
+        <!-- <div class="h-[5vh] sm:h-[20vh]"/> -->
+        <div class="h-[10vh]"/>
+        <Stats/>
+        
+        <Project/>
+        <div class="h-[5vh] sm:h-[10vh]"/>
+        
+
+        
+</LayoutMain>
 
 <style>
     .blank {

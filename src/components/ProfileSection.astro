@@ -6,25 +6,25 @@
 // Fullstack
 // Android dev
 // Game dev
-import FloatingText from "../components/FloatingText.astro";
+import FloatingText from "./FloatingText.astro";
 import { Icon } from "astro-icon/components";
-import Skills from "../components/Skills.astro";
-import Project from "../components/Project.astro";
+import Skills from "./Skills.astro";
+import Project from "./Project.astro";
 ---
 
 <div id="profile">
     <FloatingText>
-        <p class="floatTextMoveL pl-10 my-[20vh]">Software engineer</p>
+        <h1 class="floatTextMoveL pl-10 my-[20vh]">Software engineer</h1>
+    </FloatingText>
+
+    <FloatingText  option="justify-end">
+        <h1 id="experienceText" class="floatTextMoveR pl-[10vw] my-[20vh]">9 years experience</h1>
     </FloatingText>
 
     <FloatingText option="justify-end">
-        <p class="floatTextMoveR pl-[10vw] my-[20vh]">9 years experiences</p>
-    </FloatingText>
-
-    <FloatingText option="justify-end">
-        <p class="floatText mt-[20vh] tracking-wide text-anti_atomic_8 dark:text-atomic_8">
+        <h2 class="floatText mt-[20vh] tracking-wide text-anti_atomic_8 dark:text-atomic_8">
             Unity - Gaming
-        </p>
+        </h2>
     </FloatingText>
     <FloatingText option="justify-end">
         <a
@@ -43,9 +43,9 @@ import Project from "../components/Project.astro";
     </FloatingText>
 
     <FloatingText>
-        <p class="floatText tracking-wide text-anti_atomic_8 dark:text-atomic_8">
+        <h2 class="floatText tracking-wide text-anti_atomic_8 dark:text-atomic_8">
             General Motors - Automotive
-        </p>
+        </h2>
     </FloatingText>
     <FloatingText>
         <a
@@ -64,9 +64,9 @@ import Project from "../components/Project.astro";
     </FloatingText>
 
     <FloatingText option="justify-end">
-        <p class="floatText mt-[20vh] tracking-wide text-anti_atomic_8 dark:text-atomic_8">
+        <h2 class="floatText mt-[20vh] tracking-wide text-anti_atomic_8 dark:text-atomic_8">
             Aversan - Aviation
-        </p>
+        </h2>
     </FloatingText>
     <FloatingText option="justify-end">
         <a
@@ -86,16 +86,16 @@ import Project from "../components/Project.astro";
     </FloatingText>
 
     <FloatingText>
-        <p class="floatTextMoveL mt-[20vh] mb-[5vh]">Technical skills</p>
+        <h1 class="floatTextMoveL mt-[20vh] mb-[5vh]">Technical skills</h1>
     </FloatingText>
     <Skills />
 
-    <FloatingText>
+    <!-- <FloatingText>
         <p class="floatTextMoveL mt-[20vh] mb-[5vh]">Current Projects</p>
-    </FloatingText>
-    <Project />
+    </FloatingText> -->
+    <!-- <Project /> -->
 
-    <FloatingText>
+    <!-- <FloatingText>
         <p class="floatText mt-[20vh] mb-[5vh]">It's the end ?! 😨</p>
     </FloatingText>
 
@@ -103,21 +103,9 @@ import Project from "../components/Project.astro";
         <p class="floatTextMoveL mt-[20vh] mb-[5vh]">
             Don't worry! More will be added 😁
         </p>
-    </FloatingText>
+    </FloatingText> -->
 
-    <div class="fles justify-center">
-        <div
-            id="funfact"
-            class=" inline cursor-pointer max-w-fit min-h-fit leading-8 bg-anti_atomic_1 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-atomic_1 text-anti_atomic_7 dark:text-atomic_7 font-bold py-2 px-4 h-11 border-b-4 border-anti_atomic_5 dark:border-atomic_5 hover:border-anti_atomic_5 dark:hover:border-atomic_5 rounded-xl"
-        >
-            Funfact!
-            <span id="funfact-text" class="hidden text-anti_atomic_2 dark:text-atomic_2">
-                I have always avoid web development but it's been fun designing and
-                coding this site
-            </span>
-        </div>
 
-    </div>
 
 </div>
 
@@ -139,18 +127,11 @@ import Project from "../components/Project.astro";
         observer.observe(card);
     });
 
-    import { typing } from "../scripts/typewrite.ts";
 
-    const tFunfact = document.querySelector("#funfact-text") as HTMLElement;
-    const bFunfact = document.querySelector("#funfact") as HTMLElement;
-    let isClick = false;
-    bFunfact.onclick = () => {
-        if (!isClick) {
-            tFunfact.style.display = "inline";
-            typing(tFunfact, 50);
-            isClick = !isClick;
-        }
-    };
+    const tExperience = document.querySelector("#experienceText") as HTMLElement;
+    let year = new Date().getFullYear() 
+    tExperience.textContent = `${year - 2014} years experience`
+
 </script>
 
 <style>

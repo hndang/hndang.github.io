@@ -1,0 +1,177 @@
+---
+import SkillButton from "./SkillButton.astro";
+import Skills from "./Skills.astro";
+
+let tab = ["Statistic", "Skills", "Hobbies"]
+
+let year_exp = new Date().getFullYear() -2014
+---
+
+<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="sm:hidden">
+        <label for="tabs" class="sr-only">Select tab</label>
+        <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option>{tab[0]}</option>
+            <option>{tab[1]}</option>
+            <option>{tab[2]}</option>
+        </select>
+    </div>
+    <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+        <li class="w-full">
+            <button id="tab1" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="inline-block w-full p-4 rounded-ss-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">{tab[0]}</button>
+        </li>
+        <li class="w-full">
+            <button id="tab2" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">{tab[1]}</button>
+        </li>
+        <li class="w-full">
+            <button id="tab3" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">{tab[2]}</button>
+        </li>
+    </ul>
+    <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+        <div class=" p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="panel1" role="tabpanel" aria-labelledby="stats-tab">
+            <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-4 xl:grid-cols-4 dark:text-white sm:p-4">
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">{year_exp}</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Years experience</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">4</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Companies</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">3</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Industries</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">20+</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Personal projects</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="panel2" role="tabpanel" aria-labelledby="about-tab">
+            <Skills/>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="panel3" role="tabpanel" aria-labelledby="faq-tab">
+            <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+                <p>I have always been a serial hobbyist with far too many to list but here are some below</p>
+            </blockquote>
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-800">Current</span>
+            </div>
+            <div class="flex flex-row flex-wrap gap-1 text-xs">
+                <SkillButton text="Biking" style="two"/>
+                <SkillButton text="Skating" style="two"/>
+                <SkillButton text="Sailing" style="two"/>
+                <SkillButton text="Backpacking" style="two"/>
+                <SkillButton text="Dancing" style="two"/>
+                <SkillButton text="Cooking" style="two"/>
+                <SkillButton text="Surfing" style="two"/>
+                
+                <SkillButton text="Game" style="two"/>
+                <SkillButton text="Anime" style="two"/>
+            </div>
+
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-800">Future ?</span>
+            </div>
+            <div class="flex flex-row flex-wrap gap-1 text-xs">
+                <SkillButton text="Kite Surfing" style="two"/>
+                <SkillButton text="Paragliding" style="two"/>
+                <SkillButton text="Diving" style="two"/>
+            </div>
+
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-800">Neglected</span>
+            </div>
+            <div class="flex flex-row flex-wrap gap-1 text-xs">
+                <SkillButton text="Photography" style="two"/>
+                <SkillButton text="Underwater hockey" style="two"/>
+                <SkillButton text="Beach volleyball" style="two"/>
+                <SkillButton text="Learning Languages" style="two"/>
+                <SkillButton text="Ukulele" style="two"/>
+                <SkillButton text="3d Printing" style="two"/>
+                <SkillButton text="Soccer" style="two"/>
+                <SkillButton text="Badminton" style="two"/>
+                <SkillButton text="Calisthenic" style="two"/>
+                <SkillButton text="Crochet" style="two"/>
+                <SkillButton text="Boardgame" style="two"/>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let button_1 = document.querySelector(
+        "#tab1",
+    ) as HTMLButtonElement;
+    let button_2 = document.querySelector(
+        "#tab2",
+    ) as HTMLButtonElement;
+    let button_3 = document.querySelector(
+        "#tab3",
+    ) as HTMLButtonElement;
+    let tabs = document.querySelector(
+        "#tabs",
+    ) as HTMLSelectElement;
+
+    let panel_1 = document.querySelector(
+        "#panel1",
+    ) as HTMLDivElement;
+    let panel_2 = document.querySelector(
+        "#panel2",
+    ) as HTMLDivElement;
+    let panel_3 = document.querySelector(
+        "#panel3",
+    ) as HTMLDivElement;
+
+    console.log(panel_1)
+    console.log(panel_2)
+    console.log(panel_3)
+    button_1.onclick = () => changeTab(1)
+    button_2.onclick = () => changeTab(2)
+    button_3.onclick = () => changeTab(3)
+
+    tabs.onchange = () => changeTab(tabs.selectedIndex + 1)
+
+    function changeTab(position:number){
+        console.log(`pos = ${position}`)
+        if(position == 1){
+            if (panel_1.classList.contains("hidden")){
+                panel_1.classList.remove("hidden")
+            }
+            if (!panel_2.classList.contains("hidden")){
+                panel_2.classList.add("hidden")
+            }
+            if (!panel_3.classList.contains("hidden")){
+                panel_3.classList.add("hidden")
+            }
+        }else if(position == 2){
+            if (!panel_1.classList.contains("hidden")){
+                panel_1.classList.add("hidden")
+            }
+            if (panel_2.classList.contains("hidden")){
+                panel_2.classList.remove("hidden")
+            }
+            if (!panel_3.classList.contains("hidden")){
+                panel_3.classList.add("hidden")
+            }
+        } else if(position == 3){
+            if (!panel_1.classList.contains("hidden")){
+                panel_1.classList.add("hidden")
+            }
+            if (!panel_2.classList.contains("hidden")){
+                panel_2.classList.add("hidden")
+            }
+            if (panel_3.classList.contains("hidden")){
+                panel_3.classList.remove("hidden")
+            }
+        }
+    }
+
+</script>

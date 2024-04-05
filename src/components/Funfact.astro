@@ -1,0 +1,29 @@
+<div class="fles justify-center">
+    <div
+        id="funfact"
+        class=" inline cursor-pointer max-w-fit min-h-fit leading-8 bg-anti_atomic_1 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-atomic_1 text-anti_atomic_7 dark:text-atomic_7 font-bold py-2 px-4 h-11 border-b-4 border-anti_atomic_5 dark:border-atomic_5 hover:border-anti_atomic_5 dark:hover:border-atomic_5 rounded-xl"
+    >
+        Funfact!
+        <span id="funfact-text" class="hidden text-anti_atomic_2 dark:text-atomic_2">
+            I have always avoid web development but it's been fun designing and
+            coding this site
+        </span>
+    </div>
+
+</div>
+
+<script>
+
+    import { typing } from "../scripts/typewrite.ts";
+
+    const tFunfact = document.querySelector("#funfact-text") as HTMLElement;
+    const bFunfact = document.querySelector("#funfact") as HTMLElement;
+    let isClick = false;
+    bFunfact.onclick = () => {
+        if (!isClick) {
+            tFunfact.style.display = "inline";
+            typing(tFunfact, 50);
+            isClick = !isClick;
+        }
+    };
+</script>
