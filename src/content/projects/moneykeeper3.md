@@ -7,4 +7,5 @@ date: 09/06/2021
 category: [Android, Kotlin]
 frontpage: true
 skill: [Kotlin,Android Native]
+link: ''
 ---

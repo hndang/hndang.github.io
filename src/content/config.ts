@@ -10,6 +10,7 @@ const projectsCollection = defineCollection({
         category: z.array(z.string()),
         frontpage: z.boolean(z.string()),
         skill: z.array(z.string()),
+        link: z.string(),
     })
 });
 
