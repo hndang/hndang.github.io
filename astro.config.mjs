@@ -6,8 +6,7 @@ import icon from "astro-icon";
 export default defineConfig({
     site: 'https://hoangdang.dev',
     base: '',
-  integrations: [tailwind(), 
-    icon(
-
-    )]
+    integrations: [tailwind(), 
+        icon()
+    ],
 });
