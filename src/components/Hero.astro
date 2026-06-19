@@ -5,8 +5,9 @@ import SkillButton from "./SkillButton.astro";
 
 ---
 
-<div
+<section
     id="hero"
+    aria-label="Hero introduction"
     class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-anti_atomic_6 dark:text-atomic_6 m-4 text-base items-end h-max"
 >
     <div class="col-span-1 row-span-2 grid-flow-row-dense">
@@ -16,41 +17,40 @@ import SkillButton from "./SkillButton.astro";
             text="Hoang Dang"
             custom_class="font-bold text-myname-sm sm:text-myname text-anti_atomic_3 dark:text-atomic_3 font-quirlycues"
         />
-        <p class="font-bold text-3xl">
-            I'm a software engineer and I like to automate things <Icon
+        <h1 class="font-bold text-3xl">
+            I build AI-powered software & backend systems for robotics and automation <Icon
                 name="ic:baseline-settings"
                 class="size-10 inline animate-spin-slow"
             />
-
-            <div class="flex flex-col pb-2">
-                <div class="rounded-full">
-                    <object
-                        type="image/svg+xml"
-                        data="svg/profile_animated.svg"
-                        class="size-28 grayscale hover:grayscale-0"></object>
-                </div>
-
-                <div class="flex mt-4 md:mt-6">
-                    <a
-                        href="https://calendly.com/hoangdang-eng/talk"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-anti_atomic_8 rounded-lg hover:bg-anti_atomic_2 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-atomic_1 dark:hover:bg-atomic_6 dark:focus:ring-blue-800"
-                        >Let's talk!</a
-                    >
-                    <a
-                        href="https://www.linkedin.com/in/hndang/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-anti_atomic_8 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-atomic_5 dark:hover:text-white dark:hover:bg-gray-700"
-                        >Available for work ☑️</a
-                    >
-                </div>
+        </h1>
+        <div class="flex flex-col pb-2">
+            <div class="rounded-full">
+                <object
+                    type="image/svg+xml"
+                    data="svg/profile_animated.svg"
+                    aria-label="Hoang Dang profile avatar"
+                    class="size-28 grayscale hover:grayscale-0"></object>
             </div>
-        </p>
+
+            <div class="flex mt-4 md:mt-6">
+                <a
+                    href="https://calendly.com/hoangdang-eng/talk"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-anti_atomic_8 rounded-lg hover:bg-anti_atomic_2 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-atomic_1 dark:hover:bg-atomic_6 dark:focus:ring-blue-800"
+                    >Let's talk!</a
+                >
+                <a
+                    href="https://www.linkedin.com/in/hndang/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-anti_atomic_8 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-atomic_5 dark:hover:text-white dark:hover:bg-gray-700"
+                    >Available for work ☑️</a
+                >
+            </div>
+        </div>
         <br />
     </div>
-    <!-- <div class="row-span-1"></div> -->
     <div></div>
 
     <div class="flex flex-col">
@@ -90,12 +90,10 @@ import SkillButton from "./SkillButton.astro";
                     d="M 1537.40,560.74 C 1539.29 562.03, 1541.22 562.23, 1542.14 561.40 C 1543.07 560.56, 1542.97 558.59, 1542.04 556.56 C 1541.12 554.53, 1539.33 552.51, 1537.50 551.25 C 1535.67 550.00, 1533.85 549.54, 1532.89 550.28 C 1531.93 551.01, 1531.80 552.83, 1532.70 554.93 C 1533.60 557.02, 1535.52 559.45, 1537.40 560.74"
                 ></path>
             </svg>
- 
         </div>
         <div
             class="grid grid-cols-4 gap-0 row-span-1 col-span-1 h-fit w-fit place-self-end"
         >
-            <!-- <div class="dot"></div> -->
             <Icon
                 name="line-md:chevron-triple-down"
                 class="size-20 md:size-24 2xl:size-28 text-anti_atomic_8 dark:text-atomic_2 animate-pulse"
@@ -128,7 +126,6 @@ import SkillButton from "./SkillButton.astro";
             </svg>
             </a>
 
-
             <a href={"https://www.linkedin.com/in/hndang/"} rel="noopener noreferrer" target="_blank">
                 <Icon
                     name="ri:linkedin-line"
@@ -154,17 +151,15 @@ import SkillButton from "./SkillButton.astro";
                     class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-anti_atomic_8 hover:dark:text-atomic_2"
                 />
             </a>
-            <a href="/profile/">            
+            <a href="/profile/">
                 <Icon
                     name="line-md:person"
                     class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-anti_atomic_8 hover:dark:text-atomic_2"
                 />
-            
             </a>
-
         </div>
     </div>
-</div>
+</section>
 
 <script>
     const dark_light_switch = document.querySelector(
@@ -174,8 +169,6 @@ import SkillButton from "./SkillButton.astro";
     const icon_dl2 = document.querySelector("#icon_dark_light2") as HTMLElement;
     const parent = document.querySelector("#parent") as HTMLElement;
 
-    // console.log(icon_dl);
-    // console.log(icon_dl2);
     let isDark = true
     let data = sessionStorage.getItem("isDark")
     if (data == null){
@@ -183,7 +176,6 @@ import SkillButton from "./SkillButton.astro";
     }else{
         isDark = data == "true"
     }
-    console.log(document.documentElement.classList)
 
     if (!isDark){
         icon_dl.style.display = "none";
@@ -204,8 +196,5 @@ import SkillButton from "./SkillButton.astro";
             document.documentElement.classList.add("dark");
             sessionStorage.setItem("isDark", `${isDark}`);
         }
-        console.log(document.documentElement.classList)
     };
-    
-    
 </script>

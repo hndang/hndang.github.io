@@ -1,4 +1,7 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import LayoutNormal from '../layouts/LayoutNormal.astro';
+import Header from '../components/Header.astro';
 import { getCollection } from "astro:content";
 
 const showcaseProjects = await getCollection('projects', ({ id }) => {
@@ -6,10 +9,12 @@ const showcaseProjects = await getCollection('projects', ({ id }) => {
 });
 ---
 
-<ul>
-    {
-        showcaseProjects.map(proj =>
-            <li>{proj.data.title}</li>
-        )
-    }
-</ul>
+<LayoutNormal title="Projects | Hoang Dang — AI, Automation & Software Solutions" description="Explore projects in AI chatbots, Android apps, game development, and algorithmic trading built by Hoang Dang." canonical="/projects/">
+    <ul>
+        {
+            showcaseProjects.map(proj =>
+                <li>{proj.data.title}</li>
+            )
+        }
+    </ul>
+</LayoutNormal>
