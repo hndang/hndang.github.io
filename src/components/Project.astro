@@ -17,8 +17,15 @@ import SkillButton from "./SkillButton.astro";
 // });
 
 
-const showcaseProjects = await getCollection('projects', ({ data }) => {
+const rawProjects = await getCollection('projects', ({ data }) => {
   return data.frontpage == true;
+});
+
+// Sort newest first by date (DD/MM/YYYY → YYYYMMDD string compare)
+const showcaseProjects = rawProjects.sort((a, b) => {
+  const dateA = a.data.date ? a.data.date.split('/').reverse().join('') : '';
+  const dateB = b.data.date ? b.data.date.split('/').reverse().join('') : '';
+  return dateB.localeCompare(dateA);
 });
 ---
 

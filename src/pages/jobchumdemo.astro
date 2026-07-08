@@ -1,0 +1,17 @@
+---
+// Redirect to the live JobChum demo on GCP Cloud Run
+const JOBCHUM_URL = "https://jobchum-507158723512.us-central1.run.app";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting to JobChum Demo — Hoang Dang</title>
+    <meta http-equiv="refresh" content={`0; url=${JOBCHUM_URL}`} />
+    <meta name="description" content="Redirecting to JobChum autonomous job application assistant demo" />
+  </head>
+  <body>
+    <p>Redirecting to <a href={JOBCHUM_URL}>JobChum Demo</a>...</p>
+  </body>
+</html>
